@@ -1,0 +1,23 @@
+<!--Campos de formulário-->
+<mat-card>
+<mat-toolbar>Postagens</mat-toolbar>
+
+<mat-card-content>
+  <form [formGroup]="form" class="min-width">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Title" formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Body" formControlName="body" />
+    </mat-form-field>
+  </form>
+</mat-card-content>
+
+<!--Ação dos botões-->
+<mat-card-actions>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+  <button mat-raised-button (click)="onCancel()">Cancelar</button>
+</mat-card-actions>
+
+</mat-card>

@@ -1,0 +1,17 @@
+<mat-toolbar>Postagens</mat-toolbar>
+<div class="column-flex">
+<app-post-list
+*ngIf="posts$ | async as posts; else loading">
+[posts]="posts"
+(add)="onAdd()"
+></app-post-list>
+
+<!-- Spinner Loading -->
+<ng-template #loading>
+  <div class="loading-spinner">
+  <mat-spinner></mat-spinner>
+</div>
+</ng-template>
+</div>
+
+
